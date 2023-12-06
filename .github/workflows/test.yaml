@@ -1,17 +1,15 @@
 name: Test
-on: 
-  workflow_call
-
+on: workflow_call
 
 jobs:
   test-and-build:
-    runs-on: ubuntu
-    steps: 
-      - name: checkout 
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
         uses: actions/checkout@v3
       - name: setup environment
         uses: actions/setup-node@v3
-        with: 
+        with:
           node-version: 18
           cache: npm
       - name: install dependincies
