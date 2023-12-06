@@ -1,0 +1,5 @@
+* @mahmud-arif
+*.js @mahmud-arif
+*.ts @mahmud-arif
+*.tsx @mahmud-arif
+/e2e/ @mahmud-arif
