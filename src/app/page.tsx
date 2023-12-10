@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
         <h2>Hello World</h2>
         <h3>hi</h3>
       </div>
-      <Link href="/about">About</Link>
+      {/* <Link href="/about">About</Link> */}
     </main>
   );
 }
