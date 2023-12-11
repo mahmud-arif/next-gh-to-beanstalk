@@ -20,6 +20,9 @@ jobs:
           echo "GitHub Token: ${{ secrets.CHANGESETS_TOKEN }}"
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Setup Node Environment
         uses: actions/setup-node@v3
         with:
