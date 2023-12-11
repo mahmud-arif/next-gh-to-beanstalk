@@ -13,6 +13,12 @@ jobs:
     outputs:
       should-deploy: ${{steps.changesets.outputs.hasChangesets == 'false'}}
     steps:
+      - name: Debug Information (Before Main Workflow)
+        run: |
+          echo "GitHub User: $(git config user.name)"
+          echo "GitHub Email: $(git config user.email)"
+          echo "GitHub Token: ${{ secrets.CHANGESETS_TOKEN }}"
+          # Add any other relevant debugging information here
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node Environment
