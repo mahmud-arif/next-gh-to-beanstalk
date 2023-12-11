@@ -13,6 +13,11 @@ jobs:
     outputs:
       should-deploy: ${{steps.changesets.outputs.hasChangesets == 'false'}}
     steps:
+      - name: Debug Information
+        run: |
+          echo "GitHub User: $GITHUB_ACTOR"
+          echo "GitHub Email: $GITHUB_ACTOR@users.noreply.github.com"
+          echo "GitHub Token: ${{ secrets.CHANGESETS_TOKEN }}"
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node Environment
