@@ -1,13 +1,13 @@
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="main">
       <div>
         <h2>Hello World</h2>
-        <h3>hi</h3>
+        <h3>hi dkjfkdj</h3>
       </div>
-      {/* <Link href="/about">About</Link> */}
+      <Link href="/about">About</Link>
     </main>
   );
 }
