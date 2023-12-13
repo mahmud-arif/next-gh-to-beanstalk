@@ -17,7 +17,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::615577564605:role/gh-next-beanstalk
+          role-to-assume: arn:aws:iam::615577564605:role/gh-next-EB
           aws-region: ${{ vars.AWS_REGION }}
 
       - uses: actions/cache@v3
