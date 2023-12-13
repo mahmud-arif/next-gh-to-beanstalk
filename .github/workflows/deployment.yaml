@@ -37,6 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+      id-token: write
     environment:
       name: ${{ inputs.github-env }}
       url: "http://${{ steps.get-env-cname.outputs.aws_env_cname }}"
@@ -47,7 +48,7 @@ jobs:
           echo "::error::Cannot deploy to production using a non prodcuction environment"
           exit 1
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::615577564605:role/gh-next-beanstalk
           aws-region: ${{ vars.AWS_REGION }}
