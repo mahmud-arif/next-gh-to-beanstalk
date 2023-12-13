@@ -6,6 +6,7 @@ export default function Home() {
       <div>
         <h2>Hello World</h2>
         <h3>hi ci/cd is ready for test</h3>
+        <h2>deploy pr branch by /deploy comment</h2>
       </div>
       <Link href="/about">About</Link>
     </main>
