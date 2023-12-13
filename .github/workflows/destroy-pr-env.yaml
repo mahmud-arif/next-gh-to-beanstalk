@@ -10,11 +10,12 @@ jobs:
     if: (github.event.issue.pull_request && github.event.issue.state == 'open' && github.event.comment.body == '/destroy') || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     permissions:
+      id-token: write
       deployments: write
       pull-requests: write
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::615577564605:role/gh-next-beanstalk
           aws-region: ${{ vars.AWS_REGION }}
